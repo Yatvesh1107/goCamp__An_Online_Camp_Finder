@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoCamp</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <%- include('./partials/navbar.ejs') %>
+  <main>
+    <div id="page">
+      <div class="container" style="padding-top: 7%;" >
+        <h1 class="text-center" style="color: aliceblue;">Select a category </h1>
+        <div class="row auto-fit" style="padding-top: 50px;">
+          <div class="col-md-4" >
+            <div class="card">
+              <img src="https://images.pexels.com/photos/261169/pexels-photo-261169.jpeg?cs=srgb&dl=pexels-pixabay-261169.jpg&fm=jpg" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">View Resorts</h5>
+                <p class="card-text">Explore available resorts.</p>
+                <a href="/categories/resorts" class="btn btn-primary">Go to Resorts</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?cs=srgb&dl=pexels-pixabay-164595.jpg&fm=jpg" class="card-img-top" alt="...">
+    
+              <div class="card-body">
+                <h5 class="card-title">View Hotels</h5>
+                <p class="card-text">Discover dining options.</p>
+                <a href="/categories/restaurants" class="btn btn-primary">Go to Restaurants</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://images.pexels.com/photos/1309584/pexels-photo-1309584.jpeg?cs=srgb&dl=pexels-lukas-1309584.jpg&fm=jpg" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">View Campgrounds</h5>
+                <p class="card-text">Find the perfect campground.</p>
+                <a href="/categories/camps" class="btn btn-primary">Go to Campgrounds</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <%- include('./partials/footer.ejs') %>
+</body>
+</html>
+
+<style>
+  #page {
+    height: 90.5vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("https://images.unsplash.com/photo-1559521783-1d1599583485?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  background-size: cover;
+  background-position: center;
+  }
+  .card {
+    border-radius: 2%;
+    overflow: hidden;
+    border-color: none;
+    border: 0;
+  }
+</style>

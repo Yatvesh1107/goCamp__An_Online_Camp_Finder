@@ -1,0 +1,59 @@
+<% layout('layouts/boilerplate.ejs') %>
+    <div class="row">
+      <h1 class="text-center mb-3">New Campground</h1>
+      <div class="col-md-7 offset-md-3">
+        <form action="/campgrounds" method="post" novalidate class="validated-form" enctype="multipart/form-data">
+          <div class="mb-3">
+           <label class="form-label" for="title">Enter title</label>
+           <input class="form-control" type="text" id="title" required name="campgrounds[title]">
+           <div class="valid-feedback">
+             Looks good!
+           </div>
+          </div>
+          <div class="mb-3">
+           <label class="form-label" for="location">Enter location</label>
+           <input class="form-control" type="text" id="location" required name="campgrounds[location]">
+           <div class="valid-feedback">
+             Looks good!
+           </div>
+         </div>
+          <div class="mb-3">
+           <div class="">
+            <label class="form-label" for="price">Price</label>
+            <div class="valid-feedback">
+             Looks good!
+           </div>
+           </div>
+           <div class="input-group mb-3">
+             <span class="input-group-text" id="price-label">&#x20B9;</span>
+             <input type="text" id="price" aria-describedby="price-label" class="form-control" required placeholder="0.0" name="campgrounds[price]">
+             <div class="valid-feedback">
+               Looks good!
+             </div>
+           </div>
+          <div class="mb-3">
+           <label class="form-label" for="image">Image URL</label>
+             <input class="form-control" type="file" name="image" id="" multiple>
+           </div>
+          </div>
+          <div class="mb-3">
+           <label class="form-label" for="description">Description</label>
+           <textarea class="form-control" type="text" id="description" required name="campgrounds[description]"></textarea>
+           <div class="valid-feedback">
+             Looks good!
+           </div>
+          </div>
+          <div class="mb-3">
+            <button class="btn btn-success">Submit</button>
+            <a class="btn btn-secondary" href="/campgrounds">Back</a>
+          </div>
+         </form>
+    </div>
+        </div>
+      </div>
+<style>
+  body {
+    background-color: rgb(228, 228, 228);
+    background-image: linear-gradient(rgb(246, 246, 246), rgb(215, 254, 239));
+  }
+</style>  

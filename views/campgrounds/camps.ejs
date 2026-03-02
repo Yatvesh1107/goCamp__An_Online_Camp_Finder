@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Camps</title>
+    <!-- Include Bootstrap CSS (adjust the link based on your setup) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <%- include('../partials/navbar.ejs') %>
+  <main>
+    <header style="width: 100%;">
+      <img style="height: 400px; width: 100%;" src="https://www.nps.gov/mora/planyourvisit/images/OhanaCampground2016_CMeleedy_01_web.jpeg?maxwidth=1300&maxheight=1300&autorotate=false" alt="Header Image">
+      <h1 style="color: white; position: absolute; top: 20%; left: 10%; font-size: 50px">View all the camps...</h1>
+    </header>
+      <hr>
+    <div class="container mt-4 col-10">
+      <div class="row">
+          <% camps.forEach(camp => { %>
+              <div class="col-md-3">
+                  <div class="card mb-4" >
+                      <img style="height: 300px;" src="<%= camp.images[0].url %>" class="card-img-top" alt="<%= camp.name %>">
+                      <div class="card-body">
+                          <h5 class="card-title"><%= camp.title %></h5>
+                          <p class="card-text" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-height: 1.5em;"><%= camp.description %></p>
+                        </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><%= camp.location %></li>
+                            <li class="list-group-item">&#x20B9; <%= camp.price %></li>
+                            <li class="list-group-item"><a class="btn btn-primary" href="/campgrounds/<%= camp._id %>">View <%= camp.title %></a></li>
+                          </ul>
+                          
+                  </div>
+              </div>
+          <% }); %>
+      </div>
+    </div>
+  </main>
+  <% include('../partials/footer.ejs') %>
+</body>
+<style>
+  body {
+    background-color: rgb(196, 224, 250);
+  }
+</style>
+</html>

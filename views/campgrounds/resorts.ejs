@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resorts</title>
+    <!-- Include Bootstrap CSS (adjust the link based on your setup) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <%- include('../partials/navbar.ejs')  %>
+  <main>
+    <header style="width: 100%;">
+      <img style="height: 400px; width: 100%;" src="https://images.pexels.com/photos/261169/pexels-photo-261169.jpeg?cs=srgb&dl=pexels-pixabay-261169.jpg&fm=jpg" alt="Header Image">
+      <h1 style="color: white; position: absolute; top: 20%; left: 10%;font-size: 50px">View all the resorts...</h1>
+    </header>
+    <div class="container-fluid mt-4 width: 50%;" >
+    
+      <hr>
+    <div class="container mt-4 col-10">
+      <div class="row">
+          <% resorts.forEach(resort => { %>
+              <div class="col-md-3">
+                  <div class="card mb-4" id="c">
+                      <img style="height: 300px;" src="<%= resort.images[0].url %>" class="card-img-top" alt="<%= resort.name %>">
+                      <div class="card-body">
+                          <h5 class="card-title"><%= resort.title %></h5>
+                          <p class="card-text" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-height: 1.5em;"><%= resort.description %></p>
+                        </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><%= resort.location %></li>
+                            <li class="list-group-item">&#x20B9; <%= resort.price %></li>
+                            <li class="list-group-item"><a class="btn btn-primary" href="/campgrounds/<%= resort._id %>">View <%= resort.title %></a></li>
+                          </ul>
+                          
+                  </div>
+              </div>
+          <% }); %>
+      </div>
+    </div>
+  </main>
+  <%- include('../partials/footer.ejs')  %>
+</body>
+<style>
+  body {
+    background-color: rgb(196, 224, 250);
+  }
+</style>
+</html>

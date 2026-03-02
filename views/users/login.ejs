@@ -1,0 +1,47 @@
+<% layout('layouts/boilerplate.ejs') %>
+<link rel="stylesheet" href="/public/stylesheets/auth.css">
+<div class="container justify-content-center align-items-center mt-3">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 col-xl-6 offset-xl-3">
+      <div class="card shadow mb-5">
+        <img class="card-img-top" src="https://images.unsplash.com/photo-1487730116645-74489c95b41b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="">
+        <div class="card-body">
+          <h5>Login</h5>
+          <form action="/login" method="post" class="validated-form" novalidate>
+            <div class="mb-3">
+              <label class="form-label" for="username">Username</label>
+              <input class="form-control" type="text" id="username" required autofocus name="username">
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+             </div>
+             <div class="mb-4">
+              <label class="form-label" for="password">Password</label>
+              <input class="form-control" type="password" id="password" required name="password">
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+             </div>
+             <button class="btn btn-success col-12">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  body {
+    height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("https://images.unsplash.com/photo-1559521783-1d1599583485?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  background-size: cover;
+  background-position: center;
+  }
+  .card {
+    background-image: linear-gradient(to right, rgb(227, 216, 214),rgb(203, 203, 203));
+    border: 0 ;
+    padding-bottom: 10px;
+  }
+
+</style>
