@@ -75,4 +75,4 @@ Go to: `http://localhost:3000`
 > Ensure you add the required `.env` variables to the platform's config.
 
 
-### 🙌 Made with ❤️ by Nikhil Mali & Truptesh Tare
+### 🙌 Made with ❤️ by Yatvesh Patil
